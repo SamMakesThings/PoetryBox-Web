@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- <script type="module">
+            // import schedule from './poem-schedule.json';
+            // import { fillPoemDiv, getCurrentPoem } from './scripts.js';
+
+            // console.log(schedule);
+            // fillPoemDiv(getCurrentPoem(schedule));
+        // </script> -->
+        <script src="scripts.js"></script>
+        <title>SF Poetry Box Project</title>
+    </head>
+    <body>
+        <div class="content__div">
+            <div id="poem" class="poem__div">
+                <p>As I sit, riding through this foggy wood</p>
+                <p>My thoughts wander far and wide,</p>
+                <p>Through the trees, where secrets hide.</p>
+                <p>Each step echoes in the mist,</p>
+                <p>A path by moonlight softly kissed.</p>
+            </div>
+            <button id="nextPoem" onclick="fillPoemDiv(document.getElementById('poem'))">Next Poem</button>
+        </div>
+    </body>
+</html>
+
