@@ -9,6 +9,13 @@ fetch('./poem-schedule.json')
 function getCurrentPoem() {
     var now = new Date();
     var nowISO = now.toISOString();
+
+    var nowMinutes = now.getMinutes();
+
+    if (nowMinutes === 13 || nowMinutes === 14) {
+        return "pursuitClue";
+    }
+
     var nextPoemObject = schedule.schedule.slice().reverse().find(poem => poem.datetimeUTC < nowISO);
     var nextPoemName = nextPoemObject.poem;
     console.log(nextPoemName)
