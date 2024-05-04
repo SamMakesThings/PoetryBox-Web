@@ -14,18 +14,23 @@
             function checkAndUpdatePoem() {
                 var currentPoem = getCurrentPoem();
                 if (currentPoem !== lastPoem) {
-                    fillPoemDiv(document.getElementById('poem'));
+                    fillPoemDiv(document.getElementById('poem'), document.getElementById('pursuit-div'));
                     lastPoem = currentPoem;
                 }
             }
 
             setInterval(checkAndUpdatePoem, 60000); // Check every minute
+
+            setTimeout(checkAndUpdatePoem, 3000);
         </script>
         <script src="scripts.js"></script>
         <title>SF Poetry Box Project</title>
     </head>
     <body>
         <div class="content__div">
+            <div id="pursuit-div" class="pursuit__div">
+                <p> </p>
+            </div>
             <div id="poem" class="poem__div">
                 <p>As I sit, riding through this foggy wood</p>
                 <p>My thoughts wander far and wide,</p>

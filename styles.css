@@ -6,6 +6,7 @@ p {
     flex: 1;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -15,4 +16,10 @@ p {
     /* height: 100vh; */
     background-color: #f9f9f9;
     max-width: 800px; /* Sensible max width for readability */
+}
+
+.pursuit__div {
+    font-family: 'Courier New', monospace;
+    line-height: 0;
+    letter-spacing: -3px;
 }
