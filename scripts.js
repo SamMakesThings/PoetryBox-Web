@@ -1,7 +1,7 @@
 // NOTE: Using var instead of const because of very old browsers on kindles
 
 var schedule = null;
-fetch('./poem-schedule.json')
+fetch('https://raw.githubusercontent.com/SamMakesThings/PoetryBox-Web/main/poem-schedule.json')
     .then(response => response.json())
     // .then(data => console.log(data));
     .then(data => schedule = data);
@@ -21,7 +21,7 @@ function getCurrentPoem() {
 function fillPoemDiv(div) {
     var poemName = getCurrentPoem();
     // fetch poem from path
-    var poemResponse = fetch(`./poems/${poemName}.txt`)
+    var poemResponse = fetch(`https://raw.githubusercontent.com/SamMakesThings/PoetryBox-Web/main/poems/${poemName}.txt`)
 
 
     poemResponse.then(response => response.text())

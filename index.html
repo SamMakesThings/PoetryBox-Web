@@ -9,6 +9,18 @@
             // console.log(schedule);
             // fillPoemDiv(getCurrentPoem(schedule));
         // </script> -->
+        <script>
+            var lastPoem = null;
+            function checkAndUpdatePoem() {
+                var currentPoem = getCurrentPoem();
+                if (currentPoem !== lastPoem) {
+                    fillPoemDiv(document.getElementById('poem'));
+                    lastPoem = currentPoem;
+                }
+            }
+
+            setInterval(checkAndUpdatePoem, 60000); // Check every minute
+        </script>
         <script src="scripts.js"></script>
         <title>SF Poetry Box Project</title>
     </head>
@@ -21,7 +33,7 @@
                 <p>Each step echoes in the mist,</p>
                 <p>A path by moonlight softly kissed.</p>
             </div>
-            <button id="nextPoem" onclick="fillPoemDiv(document.getElementById('poem'))">Next Poem</button>
+            <!-- <button id="nextPoem" onclick="fillPoemDiv(document.getElementById('poem'))">Next Poem</button> -->
         </div>
     </body>
 </html>
