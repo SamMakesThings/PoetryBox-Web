@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            var lastPoem = null;
+            function checkAndUpdatePoem() {
+                var currentPoem = getCurrentPoem();
+                if (currentPoem !== lastPoem) {
+                    fillPoemDiv(document.getElementById('poem'), document.getElementById('pursuit-div'));
+                    lastPoem = currentPoem;
+                }
+            }
+
+            setInterval(checkAndUpdatePoem, 60000); // Check every minute
+
+            setTimeout(checkAndUpdatePoem, 3000);
+        </script>
+        <script src="scripts.js"></script>
+        <title>Stone Gold Poetry</title>
+    </head>
+    <body>
+        <div class="content__div">
+            <div id="pursuit-div" class="pursuit__div">
+                <p> </p>
+            </div>
+            <div id="poem" class="poem__div">
+                <p>As I sit, riding through this foggy wood</p>
+                <p>My thoughts wander far and wide,</p>
+                <p>Through the trees, where secrets hide.</p>
+                <p>Each step echoes in the mist,</p>
+                <p>A path by moonlight softly kissed.</p>
+            </div>
+        </div>
+    </body>
+</html>
+
