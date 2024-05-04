@@ -52,7 +52,7 @@ function fillPoemDiv(div, pursuitDiv) {
         <p>__________________________@@__@__&@@@_____________</p>
         <p>__________________________@@______@@@_____________</p>`
     } else {
-        div.innerHTML = "";
+        pursuitDiv.innerHTML = "";
     }
 
     poemResponse.then(response => response.text())
