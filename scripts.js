@@ -46,6 +46,8 @@ function fillPoemDiv(div, pursuitDiv) {
         <p>ͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺ#@%ͺ@@@@@@@@ͺͺͺͺͺͺͺͺͺͺͺͺ</p>
         <p>ͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺ@@ͺͺ@ͺͺ&@@@ͺͺͺͺͺͺͺͺͺͺͺͺͺ</p>
         <p>ͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺͺ@@ͺͺͺͺͺͺ@@@ͺͺͺͺͺͺͺͺͺͺͺͺͺ</p>`
+    } else {
+        div.innerHTML = "";
     }
 
     poemResponse.then(response => response.text())
