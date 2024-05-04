@@ -12,10 +12,8 @@ p {
 }
 
 .poem__div {
-    /* flex: 1; */
-    /* height: 100vh; */
-    background-color: #f9f9f9;
     max-width: 800px; /* Sensible max width for readability */
+    font-size: 20
 }
 
 .pursuit__div {
