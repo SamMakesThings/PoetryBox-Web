@@ -1,13 +1,11 @@
 // NOTE: Using var instead of const because of very old browsers on kindles
 
 var schedule = null;
-fetch('https://raw.githubusercontent.com/SamMakesThings/PoetryBox-Web/main/poem-schedule.json')
+fetch('./poem-schedule.json')
     .then(response => response.json())
-    // .then(data => console.log(data));
     .then(data => schedule = data);
 
 // Look at schedule JSON to identify currently scheduled poem
-// Later, can have it look at the github raw version to ensure it's up to date
 function getCurrentPoem() {
     var now = new Date();
     var nowISO = now.toISOString();
@@ -20,8 +18,8 @@ function getCurrentPoem() {
 // A function that takes a string and an HTML div, wipes the contents of that div, then fills it with <p> elements for each line in the string
 function fillPoemDiv(div, pursuitDiv) {
     var poemName = getCurrentPoem();
-    // fetch poem from path
-    var poemResponse = fetch(`https://raw.githubusercontent.com/SamMakesThings/PoetryBox-Web/main/poems/${poemName}.txt`)
+    // fetch poem from local path
+    var poemResponse = fetch(`./poems/${poemName}.txt`)
 
 
     // If it's time to show the secret clue, also add the pursuit guy logo
