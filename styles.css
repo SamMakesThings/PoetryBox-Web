@@ -13,13 +13,13 @@ p {
 
 .poem__div {
     max-width: 800px; /* Sensible max width for readability */
-    font-size: 20
+    font-size: 18
 }
 
 .pursuit__div {
     font-family: monospace;
     line-height: 0;
     letter-spacing: -3px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
